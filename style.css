@@ -5,45 +5,47 @@ body {
   padding: 0;
   color: #0f2433;
 
-  /* medical gradient background */
+  /* Soft medical gradient */
   background:
-    radial-gradient(circle at 20% 20%, rgba(0, 122, 204, 0.22), transparent 40%),
-    radial-gradient(circle at 80% 30%, rgba(0, 210, 255, 0.18), transparent 45%),
-    radial-gradient(circle at 60% 80%, rgba(0, 170, 130, 0.12), transparent 50%),
-    linear-gradient(135deg, #eaf4ff 0%, #ffffff 55%, #f5fbff 100%);
+    radial-gradient(circle at 20% 20%, rgba(0, 122, 204, 0.20), transparent 45%),
+    radial-gradient(circle at 80% 30%, rgba(0, 180, 255, 0.15), transparent 50%),
+    linear-gradient(135deg, #eef6ff 0%, #ffffff 60%, #f7fbff 100%);
   overflow-x: hidden;
 }
 
-/* ----------------- Medical pattern ----------------- */
+/* ----------------- Clean grid lines ----------------- */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
+
+  /* simple light grid */
   background-image:
-    linear-gradient(to right, rgba(0, 110, 180, 0.18) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 110, 180, 0.14) 1px, transparent 1px);
-  background-size: 80px 80px, 80px 80px;
-  opacity: 0.6;
+    linear-gradient(to right, rgba(0, 122, 204, 0.10) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 122, 204, 0.08) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px;
+  opacity: 0.5;
 }
 
+/* ----------------- Subtle ECG line (clean) ----------------- */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
+
   background-image:
     repeating-linear-gradient(
       90deg,
       transparent 0px,
-      transparent 40px,
-      rgba(0, 122, 204, 0.35) 41px,
-      rgba(0, 122, 204, 0.35) 44px,
-      transparent 45px,
-      transparent 90px
+      transparent 60px,
+      rgba(0, 122, 204, 0.25) 61px,
+      rgba(0, 122, 204, 0.25) 63px,
+      transparent 64px,
+      transparent 120px
     );
-  opacity: 0.25;
-  mix-blend-mode: overlay;
+  opacity: 0.2;
 }
 
 /* ----------------- Container ----------------- */
